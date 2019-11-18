@@ -13,5 +13,6 @@ Function.prototype.myApply = function (context) {
   } else {
     result = context.fn()
   }
+  delete context.fn
   return result
 }
