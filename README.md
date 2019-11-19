@@ -6,3 +6,4 @@
 4. [手写一个apply](./handwriting/apply.js)
 5. [手写一个bind](./handwriting/bind.js)
 6. [手写一个promise](./handwriting/promise.js)
+7. [手写一个map](./handwriting/map.js)
