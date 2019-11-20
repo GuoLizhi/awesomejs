@@ -7,3 +7,5 @@
 5. [手写一个bind](./handwriting/bind.js)
 6. [手写一个promise](./handwriting/promise.js)
 7. [手写一个map](./handwriting/map.js)
+8. [手写一个debounce](./handwriting/debounce.js)
+9. [手写一个throttle](./handwriting/throttle.js)
