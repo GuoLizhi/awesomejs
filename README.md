@@ -9,3 +9,4 @@
 7. [手写一个map](./handwriting/map.js)
 8. [手写一个debounce](./handwriting/debounce.js)
 9. [手写一个throttle](./handwriting/throttle.js)
+10. [手写一个reduce](./handwriting/reduce.js)
