@@ -1,12 +1,11 @@
-#### 手写XXX系列
+### 手写系列
+1. [手写系列-call和apply](https://github.com/GuoLizhi/awesomejs/issues/4)
+2. [手写系列-防抖(debounce)和节流(throttle)函数](https://github.com/GuoLizhi/awesomejs/issues/3)
+3. [手写系列-instanceof](https://github.com/GuoLizhi/awesomejs/issues/2)
+4. [手写系列-new](https://github.com/GuoLizhi/awesomejs/issues/1)
 
-1. [手写一个new](./handwriting/new.js)
-2. [手写一个instanceof](./handwriting/instanceof.js)
-3. [手写一个call](./handwriting/call.js)
-4. [手写一个apply](./handwriting/apply.js)
-5. [手写一个bind](./handwriting/bind.js)
-6. [手写一个promise](./handwriting/promise.js)
-7. [手写一个map](./handwriting/map.js)
-8. [手写一个debounce](./handwriting/debounce.js)
-9. [手写一个throttle](./handwriting/throttle.js)
-10. [手写一个reduce](./handwriting/reduce.js)
+### 前端安全
+1. [XSS防御](https://github.com/GuoLizhi/awesomejs/issues/6)
+
+### Vue
+1. [MVVM原理](https://github.com/GuoLizhi/awesomejs/issues/5)
