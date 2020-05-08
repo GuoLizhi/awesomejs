@@ -4,8 +4,8 @@
 3. [手写系列-instanceof](https://github.com/GuoLizhi/awesomejs/issues/2)
 4. [手写系列-new](https://github.com/GuoLizhi/awesomejs/issues/1)
 
-### 前端安全
-1. [XSS防御](https://github.com/GuoLizhi/awesomejs/issues/6)
+### 前端基础
+1. [前端安全](https://github.com/GuoLizhi/awesomejs/issues/6)
 
 ### Vue
 1. [MVVM原理](https://github.com/GuoLizhi/awesomejs/issues/5)
