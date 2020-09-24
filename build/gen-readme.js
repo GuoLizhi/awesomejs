@@ -2,7 +2,7 @@ const fs = require('fs');
 const path = require('path');
 
 function genReadme() {
-  let result = '| 索引 | 功能 |\n|  ----  | ----  |\n';
+  let result = '## 1.手写JavaScript系列\n\n| 索引 | 功能 |\n|  ----  | ----  |\n';
   const dirPath = path.resolve(__dirname, '../handwriting')
   const files = fs.readdirSync(dirPath);
   files.map((file, index) => {
@@ -10,7 +10,7 @@ function genReadme() {
     const title = getSingleDescription(filePath);
     result += `|${index+1}|[${title}](./handwriting/${file})|\n`;
   });
-  fs.writeFileSync(path.resolve(__dirname, '../dist/readme.md'), result);
+  fs.writeFileSync(path.resolve(__dirname, '../README.md'), result);
   console.log('success!');
 }
 
