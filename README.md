@@ -23,8 +23,9 @@
 |19|判断浏览器选项卡是否聚焦|[isBrowserTabFocused.js](./handwriting/isBrowserTabFocused.js)|
 |20|判断对象的数据类型|[isType.js](./handwriting/isType.js)|
 |21|new实现原理|[new.js](./handwriting/new.js)|
-|22|平滑的滚动到页面的顶部|[scrollToTop.js](./handwriting/scrollToTop.js)|
-|23|节流函数|[throttle.js](./handwriting/throttle.js)|
-|24|切换一个元素上的className，如果有则移除；没有就添加|[toggleClass.js](./handwriting/toggleClass.js)|
-|25|在给定元素上触发特定事件且能选择地传递自定义数据|[triggerEvent.js](./handwriting/triggerEvent.js)|
-|26|数组去重|[unique.js](./handwriting/unique.js)|
+|22|promise实现原理|[promise.js](./handwriting/promise.js)|
+|23|平滑的滚动到页面的顶部|[scrollToTop.js](./handwriting/scrollToTop.js)|
+|24|节流函数|[throttle.js](./handwriting/throttle.js)|
+|25|切换一个元素上的className，如果有则移除；没有就添加|[toggleClass.js](./handwriting/toggleClass.js)|
+|26|在给定元素上触发特定事件且能选择地传递自定义数据|[triggerEvent.js](./handwriting/triggerEvent.js)|
+|27|数组去重|[unique.js](./handwriting/unique.js)|

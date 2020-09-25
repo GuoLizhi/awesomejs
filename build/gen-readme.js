@@ -17,7 +17,7 @@ function genReadme() {
 
 function getSingleDescription(path) {
   const content = fs.readFileSync(path, 'utf-8');
-  const result = content.match(/\/\*\*\n\s\*\s(.+)\n/g);
+  content.match(/\/\*\*\n\s\*\s(.+)\n/);
   return RegExp.$1.trim();
 }
 
