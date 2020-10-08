@@ -9,7 +9,7 @@ Function.prototype.myApply = function (context = window) {
   let result;
   context.fn = this;
   if (arguments[1]) {
-    result = context.fn(arguments[1]);
+    result = context.fn(...arguments[1]);
   } else {
     result = context.fn();
   }

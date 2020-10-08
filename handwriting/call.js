@@ -9,6 +9,6 @@ Function.prototype.myCall = function (context = window) {
   const args = [...arguments].slice(1);
   context.fn = this;
   const result = context.fn(...args);
-  delete context;
+  delete context.fn;
   return result;
 };

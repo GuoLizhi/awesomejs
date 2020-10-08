@@ -7,6 +7,7 @@ Function.prototype.myBind = function (context = window) {
     throw new Error("Only function can call this method!");
   }
   const args = [...arguments].slice(1);
+  const fn = this
   return function () {
     return fn.apply(context, args.concat(...arguments));
   };
