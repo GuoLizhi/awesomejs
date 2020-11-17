@@ -1,2 +1,4 @@
 dist
+test
 node_modules
+.idea

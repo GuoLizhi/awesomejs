@@ -1,15 +1,16 @@
 /**
  * 简易版的深拷贝
- * @param {*} obj 
+ * @param {*} obj
  */
 function deepCopy(obj) {
+  let result
   if (typeof obj === "object") {
-    var result = obj.constructor === Array ? [] : {};
+    result = obj.constructor === Array ? [] : {};
     for (let i in obj) {
       result[i] = typeof obj[i] === "object" ? deepCopy(obj[i]) : obj[i];
     }
   } else {
-    var result = obj;
+    result = obj;
   }
   return result;
 }
