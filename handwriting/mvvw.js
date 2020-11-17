@@ -1,5 +1,6 @@
 /**
- * 实现一个简单响应式原理，包含了依赖收集与更新
+ * 实现一个简单响应式原理
+ * 包含了依赖收集与更新
  */
 // eslint-disable-next-line no-unused-vars
 class MVVM {
