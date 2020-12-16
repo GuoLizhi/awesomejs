@@ -235,3 +235,210 @@ Vue中事件可以被分为两种，一种是自定义事件，一种是DOM事�
 
 #### 5.1 自定义事件
 
+自定义事件主要由以下两部分构成
+
+1. 事件存储器
+2. 绑定事件，触发事件，解绑事件三个函数
+
+Vue中的自定义事件都是存储在实例vm上的_events对象上，key是事件名，value是事件回调。对于自定义事件，我们采用$on绑定，$emit触发，$off解绑事件。
+
+如果我们在组件上绑定了自定义事件，那这个事件会存储在子组件的_events中。子组件中依然是使用$emit去触发这个自定义事件。
+
+Vue自定义事件使用了观察者模式进行事件的监听和分发。自定义事件分为两种情况，一种是自定义，这个比较简单，就是一个简单的观察者模式的实现。如果是在组件上绑定，情况稍有一点复杂
+
+```vue
+<test @custom-click="customClickFn"></test>
+```
+
+首先，父组件给子组件绑定事件，事件是存放于子组件中的vode.componentOptions.listeners中，具体步骤：
+
+1. Vue.prototype._init
+2. initEvents() 给vm添加_events对象，用于保存自定义事件。获取到父组件给子组件绑定的自定义事件，调用updateComponentListener开始注册。
+3. 初始化组件信息，将之前存储在vnode中的listeners赋值给_parentListeners。
+4. 注册时间，与原生DOM事件绑定一直
+
+#### 5.2 DOM事件
+
+DOM事件，就是直接使用`addEventListener`。绑定事件是在DOM创建之后，插入页面之前。DOM事件会被保存在这个节点解析生成的VNode中。DOM事件可以绑定在标签或者组件上。
+
+对于绑定在标签上的DOM事件
+
+```vue
+<div @click="clickFn"></div>
+```
+
+具体的步骤为
+
+1. 开始挂载，传入Vue.prototype._update方法，进行新旧VNode对比，生成DOM。
+2. 创建DOM，处理数据`invokeCreateHooks`这里指的处理数据，就包含绑定DOM事件。
+3. 绑定DOM事件又要分为3种情况：如果新旧事件相同，则替换旧事件；如果新事件不存在旧事件中，则绑定新事件；如果旧事件不存在新事件中，则解绑旧事件。
+
+对于组件绑定DOM事件，Vue中如果想要绑定原生DOM事件在组件上，需要加上native修饰符。
+
+```vue
+<test @click.native="clickFn"></test>
+```
+
+具体的绑定步骤和上面将DOM事件绑定在标签上是一样的。
+
+### 6. Methods
+
+#### 6.1 Methods是如何访问到的
+
+直接将methods逐个复制到vm上
+
+#### 6.2 Methods是如何固定作用域的
+
+底层是使用的bind来实现
+
+### 7. Filters
+
+首先来看一段简单的Vue代码
+
+```html
+<div>{{ name | all }}</div>
+```
+
+对应的js代码
+
+```js
+new Vue({
+  data () { return { name: '111' } },
+  filters: {
+    all () { return '222' }
+  }
+})
+```
+
+#### 7.1 filters被解析成什么
+
+首先来看被解析生成的渲染函数
+
+```js
+(function() {      
+    with(this) {            
+        return _c('div',[                
+            _v(_s(_f("all")(name)))            
+        ])      
+    }
+}
+```
+
+可以看出`name | all` 被解析成了`_f("all")(name))`。
+
+#### 7.2 设置的filter是如何被调用的
+
+具体步骤如下
+
+1. 获取所有的filters
+2. 过滤出当前用到的filter，上面的例子中就是`all`
+3. 执行该filter，并传入filter符号前面的参数，上面的例子中就是`name`
+4. 得到过滤之后的值，渲染到页面上
+
+### 8. Watch
+
+设置immediate时，不需要在数据改变时触发，而是初始化watch是，在读取了监听的数据值之后，便立即调用一遍你所设置的监听回调。
+
+当设置了deep是，会做一个深度监听。因为Object.defineProperty()本身是无法做深度监听的，需要对监听的对象做一次深度遍历，将内部的每个属性都用Object.defineProperty()来设置一遍。如果没有设置deep，那watch的watcher仅仅只会被收集在监听的属性中；如果设置了deep，watch的watcher会被设置在监听对象下面的每个属性中。
+
+Vue内部，对3中形态的watch进行了处理
+
+```js
+watch: {
+  name: {
+    handler() {},
+  },
+  name() {},
+  name: 'getName'
+}
+```
+
+### 9. Mixin
+
+#### 9.1 什么时候合并
+
+这个分为两种情况
+
+1. 全局mixin和基础全局options合并
+2. 全局options和自定义options合并
+
+#### 9.2 如何合并
+
+1. mergeOptions
+2. defaultStrats: 优先使用组件options, 组件options > 组件mixin options > 全局options
+3. data合并
+4. 声明周期钩子
+5. components, directives, filters（原型叠加）
+6. watch（权重越小，越先执行）
+7. props，computed，methods （不允许重名）
+8. Template, el, propData (直接替换)
+
+### 10.v-model
+
+#### 10.1 v-model如何给组件绑定数据
+
+```html
+<div><input v-model="name" /></div>
+```
+
+上面这段代码解析成的渲染函数如下
+
+```js
+(function(){    
+    with(this){  
+        return _c('div',[
+            _c('input',
+                domProps:{"value":name}
+            )
+        ])
+    }
+})
+```
+
+这里的domProps中的name就会获取到组件实例上的name。
+
+#### 10.2 v-model绑定什么事件
+
+1. Checkbox, select, radio 绑定change事件
+2. Text, textarea 绑定input事件
+
+#### 10.3 v-model如何绑定事件
+
+生成input dom之后，插入input dom之前，会使用addEventListener绑定事件
+
+### 11. Directive
+
+#### 11.1 钩子是如何调用的
+
+首先Vue回去对比，旧节点上的指令和新节点上的指令。如果是新指令，需要初始化。初始化的过程如下
+
+1. bind
+2. inserted
+
+如果是就指令，则需要更新，执行过程如下
+
+1. update
+2. componentUpdated
+
+如果新指令比就指令少了，那会触发unbind钩子
+
+#### 11.2 怎么获取设置的指令钩子
+
+在 updateDirectives 中，处理的是指令的钩子。
+
+normalizeDirectives$1
+
+1. 遍历本节点所有的指令，逐个从组件中获取
+
+2. 把获取的钩子添加到 遍历到的当前指令上
+
+#### 11.3 如何处理钩子
+
+inserted 是在DOM 插入父节点之后才触发的，而 处理 inserted 是在 DOM 插入之前，所有这里不可能直接触发，只能是先保存起来，等到 节点被插入之后再触发。
+
+inserted 钩子是所有节点都插入完毕之后才触发的，而不是插入一个节点就触发一次
+
+
+
+
+
