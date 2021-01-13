@@ -1,3 +1,6 @@
+/**
+ * 单例模式
+ */
 class Singleton {
   constructor (name) {
     this.name = name
