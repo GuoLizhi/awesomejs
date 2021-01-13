@@ -10,18 +10,18 @@ function getSingleDescription(path) {
 function getAllDirs() {
   const dirs = fs.readdirSync('./')
   let content = ''
-  dirs.forEach(dir => {
+  dirs.forEach((dir, index) => {
     const isDirectory = fs.statSync(dir).isDirectory()
     if (!/(build|git)/.test(dir) && isDirectory) {
-      content += getDirReadme(dir)
+      content += getDirReadme(dir, index)
     }
   })
   fs.writeFileSync(path.resolve(__dirname, '../README.md'), content);
   console.log('success!');
 }
 
-function getDirReadme(dir) {
-  let result = `##${dir}\n\n| 索引 | 功能 | 地址 |\n|  ----  | ----  | ---- |\n`
+function getDirReadme(dir, i) {
+  let result = `## ${i}. ${dir}\n\n| 索引 | 功能 | 地址 |\n|  ----  | ----  | ---- |\n`
   let files = fs.readdirSync(dir)
   if (files.length === 0) return ''
   files.sort()
