@@ -33,7 +33,7 @@ function getAllDirs() {
 }
 let count = 1
 function getDirReadme(dir, i) {
-  let result = `## ${count++}. ${dirnameMap[dir]}\n\n| 索引 | 地址 |\n|  ----  | ----  | ---- |\n`
+  let result = `## ${count++}. ${dirnameMap[dir]}\n\n| 索引 | 地址 |\n|  ---- | ---- |\n`
   let files = fs.readdirSync(dir)
   if (files.length === 0) return ''
   files.sort()
