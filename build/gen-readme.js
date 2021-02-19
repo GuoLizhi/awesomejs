@@ -1,6 +1,8 @@
 const fs = require('fs');
 const path = require('path');
 
+const prefixUrl = 'https://github.com/GuoLizhi/awesomejs/blob/master'
+
 const dirnameMap = {
   handwriting: '手写JavaScript代码系列',
   CSS: 'CSS相关',
@@ -40,7 +42,7 @@ function getDirReadme(dir, i) {
   files.map((file, index) => {
     const filePath = path.resolve(dir, file)
     const title = /\.js$/.test(file) ? getSingleDescription(filePath) : file.replace('.md', '')
-    result += `${index+1}. [${title}](./${dir}/${file})\n`
+    result += `${index+1}. [${title}](${prefixUrl}/${dir}/${file})\n`
   })
   result += '\n\n'
   return result
