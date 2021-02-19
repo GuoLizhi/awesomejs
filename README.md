@@ -8,7 +8,14 @@
 1. [单例模式](./DesignPattern/Singleton.js)
 
 
-## 3. 手写JavaScript代码系列
+## 3. 工程化
+
+1. [CSRF](./Engineering/CSRF.md)
+2. [XSS](./Engineering/XSS.md)
+3. [webpack性能优化](./Engineering/webpack性能优化.md)
+
+
+## 4. 手写JavaScript代码系列
 
 1. [apply实现原理](./handwriting/apply.js)
 2. [bind实现原理](./handwriting/bind.js)
@@ -43,14 +50,14 @@
 31. [数组去重](./handwriting/unique.js)
 
 
-## 4. 网络相关
+## 5. 网络相关
 
 1. [HTTP2](./HTTP/HTTP2.md)
 2. [HTTPS](./HTTP/HTTPS.md)
 3. [TCP&UDP](./HTTP/TCP&UDP.md)
 
 
-## 5. JavaScript知识备忘
+## 6. JavaScript知识备忘
 
 1. [Object.create](./JavaScript/Object.create.md)
 2. [prototype](./JavaScript/prototype.md)
@@ -59,12 +66,12 @@
 5. [深浅拷贝](./JavaScript/深浅拷贝.md)
 
 
-## 6. NodeJS相关
+## 7. NodeJS相关
 
 1. [cluster](./NodeJS/cluster.md)
 
 
-## 7. Vue相关
+## 8. Vue相关
 
 1. [Component](./Vue/Component.md)
 2. [Computed](./Vue/Computed.md)
@@ -84,12 +91,5 @@
 16. [VModel](./Vue/VModel.md)
 17. [VNode](./Vue/VNode.md)
 18. [Watch](./Vue/Watch.md)
-
-
-## 8. 工程化
-
-1. [CSRF](./工程化/CSRF.md)
-2. [XSS](./工程化/XSS.md)
-3. [webpack性能优化](./工程化/webpack性能优化.md)
 
 

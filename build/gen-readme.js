@@ -10,7 +10,7 @@ const dirnameMap = {
   NodeJS: 'NodeJS相关',
   React: 'React相关',
   Vue: 'Vue相关',
-  工程化: '工程化'
+  Engineering: '工程化'
 }
 
 function getSingleDescription(path) {
