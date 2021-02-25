@@ -17,7 +17,7 @@ function Child(name, age) {
 Child.prototype = new Parent()
 ```
 
-继承组合继承
+寄生式组合继承
 
 ```js
 function extend(child, parent) {
