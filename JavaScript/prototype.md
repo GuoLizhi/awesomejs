@@ -1,4 +1,4 @@
-### 1.继承
+### 1. 原型继承
 
 组合继承
 
@@ -16,6 +16,12 @@ function Child(name, age) {
 }
 Child.prototype = new Parent()
 ```
+
+这种继承方式有两个比较严重的缺点
+
+1. 父类的构造函数被调用了2次，可以看到在子类的构造函数中执行了一次`Parent.call()`，然后在原型上执行了一次`new Parent()`，是一种性能上的浪费
+2. Child实例的constructor属性不对，此时`c.constructor`执行的父类的构造函数，对此我们需要人为指定`Child.prototype.constructor = Child`
+3. 子类原型上属性污染的问题，比如此时Parent类上还有一个属性`job`，此时这个`job`属性不仅会存在于子类的实例上，也会存在于子类的原型上
 
 寄生式组合继承
 
@@ -41,6 +47,8 @@ Cat.prototype.say = function() {
   console.log('cat say...')
 }
 ```
+
+这种方式目前ES5实现继承的最优解。只调用了一次父类的构造函数，并且也不会有原型上被其余属性污染的问题
 
 ### 2. 原型和原型链
 
