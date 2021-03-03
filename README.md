@@ -7,15 +7,17 @@
 
 1. [单例模式](https://github.com/GuoLizhi/awesomejs/blob/master/DesignPattern/Singleton.js)
 
-
-## 3. 工程化
+## 4. 工程化
 
 1. [CSRF](https://github.com/GuoLizhi/awesomejs/blob/master/Engineering/CSRF.md)
-2. [XSS](https://github.com/GuoLizhi/awesomejs/blob/master/Engineering/XSS.md)
-3. [webpack性能优化](https://github.com/GuoLizhi/awesomejs/blob/master/Engineering/webpack性能优化.md)
+2. [Hybrid](https://github.com/GuoLizhi/awesomejs/blob/master/Engineering/Hybrid.md)
+3. [TreeShaking](https://github.com/GuoLizhi/awesomejs/blob/master/Engineering/TreeShaking.md)
+4. [XSS](https://github.com/GuoLizhi/awesomejs/blob/master/Engineering/XSS.md)
+5. [webpack5.0](https://github.com/GuoLizhi/awesomejs/blob/master/Engineering/webpack5.0.md)
+6. [webpack性能优化](https://github.com/GuoLizhi/awesomejs/blob/master/Engineering/webpack性能优化.md)
 
 
-## 4. 手写JavaScript代码系列
+## 5. 手写JavaScript代码系列
 
 1. [apply实现原理](https://github.com/GuoLizhi/awesomejs/blob/master/handwriting/apply.js)
 2. [bind实现原理](https://github.com/GuoLizhi/awesomejs/blob/master/handwriting/bind.js)
@@ -43,21 +45,22 @@
 24. [实现一个简单响应式原理](https://github.com/GuoLizhi/awesomejs/blob/master/handwriting/mvvw.js)
 25. [new实现原理](https://github.com/GuoLizhi/awesomejs/blob/master/handwriting/new.js)
 26. [promise实现原理](https://github.com/GuoLizhi/awesomejs/blob/master/handwriting/promise.js)
-27. [平滑的滚动到页面的顶部](https://github.com/GuoLizhi/awesomejs/blob/master/handwriting/scrollToTop.js)
-28. [节流函数](https://github.com/GuoLizhi/awesomejs/blob/master/handwriting/throttle.js)
-29. [切换一个元素上的className，如果有则移除；没有就添加](https://github.com/GuoLizhi/awesomejs/blob/master/handwriting/toggleClass.js)
-30. [在给定元素上触发特定事件且能选择地传递自定义数据](https://github.com/GuoLizhi/awesomejs/blob/master/handwriting/triggerEvent.js)
-31. [数组去重](https://github.com/GuoLizhi/awesomejs/blob/master/handwriting/unique.js)
+27. [控制最大并发数量](https://github.com/GuoLizhi/awesomejs/blob/master/handwriting/requestLimit.js)
+28. [平滑的滚动到页面的顶部](https://github.com/GuoLizhi/awesomejs/blob/master/handwriting/scrollToTop.js)
+29. [节流函数](https://github.com/GuoLizhi/awesomejs/blob/master/handwriting/throttle.js)
+30. [切换一个元素上的className，如果有则移除；没有就添加](https://github.com/GuoLizhi/awesomejs/blob/master/handwriting/toggleClass.js)
+31. [在给定元素上触发特定事件且能选择地传递自定义数据](https://github.com/GuoLizhi/awesomejs/blob/master/handwriting/triggerEvent.js)
+32. [数组去重](https://github.com/GuoLizhi/awesomejs/blob/master/handwriting/unique.js)
 
 
-## 5. 网络相关
+## 6. 网络相关
 
 1. [HTTP2](https://github.com/GuoLizhi/awesomejs/blob/master/HTTP/HTTP2.md)
 2. [HTTPS](https://github.com/GuoLizhi/awesomejs/blob/master/HTTP/HTTPS.md)
 3. [TCP&UDP](https://github.com/GuoLizhi/awesomejs/blob/master/HTTP/TCP&UDP.md)
 
 
-## 6. JavaScript知识备忘
+## 7. JavaScript知识备忘
 
 1. [Object.create](https://github.com/GuoLizhi/awesomejs/blob/master/JavaScript/Object.create.md)
 2. [prototype](https://github.com/GuoLizhi/awesomejs/blob/master/JavaScript/prototype.md)
@@ -66,12 +69,12 @@
 5. [深浅拷贝](https://github.com/GuoLizhi/awesomejs/blob/master/JavaScript/深浅拷贝.md)
 
 
-## 7. NodeJS相关
+## 8. NodeJS相关
 
 1. [cluster](https://github.com/GuoLizhi/awesomejs/blob/master/NodeJS/cluster.md)
 
 
-## 8. Vue相关
+## 9. Vue相关
 
 1. [Component](https://github.com/GuoLizhi/awesomejs/blob/master/Vue/Component.md)
 2. [Computed](https://github.com/GuoLizhi/awesomejs/blob/master/Vue/Computed.md)
@@ -90,6 +93,7 @@
 15. [Slot](https://github.com/GuoLizhi/awesomejs/blob/master/Vue/Slot.md)
 16. [VModel](https://github.com/GuoLizhi/awesomejs/blob/master/Vue/VModel.md)
 17. [VNode](https://github.com/GuoLizhi/awesomejs/blob/master/Vue/VNode.md)
-18. [Watch](https://github.com/GuoLizhi/awesomejs/blob/master/Vue/Watch.md)
+18. [Vue3](https://github.com/GuoLizhi/awesomejs/blob/master/Vue/Vue3.md)
+19. [Watch](https://github.com/GuoLizhi/awesomejs/blob/master/Vue/Watch.md)
 
 
