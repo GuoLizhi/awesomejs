@@ -1,5 +1,7 @@
 /**
  * 防抖函数
+ * 防抖用途：比如避免频繁触发页面的scroll, resize事件
+ * 
  * @param {Function} fn 防抖的回调函数
  * @param {Number} wait 时间间隔
  */
