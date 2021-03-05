@@ -1,3 +1,5 @@
+![computed](http://cdn.lznism.com/vue-computed.png)
+
 1. computed初始化的过程中发生了什么？
 
 每一个computed属性都会配置一个watcher,getter保存着computed当前属性的计算函数（简单的说：就是当我们调用这个getter时，就可以获取此时最新的computed值）
@@ -35,3 +37,8 @@ function Watcher(vm, expOrFn, options) {
 3. 最后返回最新的watcher.value
 
 因此，当data发生变化时，会通知页面watcher更新，页面watcher会重新执行本watcher中保存的计算函数，从而读取到最新的computed
+
+### 总结
+1. computed是根据`watcher.dirty`来判断当前的缓存是否有效，如果dirty为true表明computed的值需要重新计算
+
+2. 如果说某个data属性被computed依赖，很明显data会收集到computed的依赖。如果其余的地方，比如模板依赖了这个computed, computed此时会充当一个月老的作用，让data的这个属性也收集到模板的依赖。一旦data发生变化。data首先是将computed的`watcher.dirty`标记位置为true。并且通知此时的模板更新，一旦模板更新，势必会重新读取`computed`，此时`computed`重新计算，从而也就获取了此时最新的computed值。
