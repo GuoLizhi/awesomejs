@@ -7,6 +7,7 @@
 
 1. [单例模式](https://github.com/GuoLizhi/awesomejs/blob/master/DesignPattern/Singleton.js)
 
+
 ## 4. 工程化
 
 1. [CSRF](https://github.com/GuoLizhi/awesomejs/blob/master/Engineering/CSRF.md)
@@ -15,6 +16,7 @@
 4. [XSS](https://github.com/GuoLizhi/awesomejs/blob/master/Engineering/XSS.md)
 5. [webpack5.0](https://github.com/GuoLizhi/awesomejs/blob/master/Engineering/webpack5.0.md)
 6. [webpack性能优化](https://github.com/GuoLizhi/awesomejs/blob/master/Engineering/webpack性能优化.md)
+7. [前端监控](https://github.com/GuoLizhi/awesomejs/blob/master/Engineering/前端监控.md)
 
 
 ## 5. 手写JavaScript代码系列
@@ -42,31 +44,35 @@
 21. [instanceOf实现原理](https://github.com/GuoLizhi/awesomejs/blob/master/handwriting/instanceof.js)
 22. [判断浏览器选项卡是否聚焦](https://github.com/GuoLizhi/awesomejs/blob/master/handwriting/isBrowserTabFocused.js)
 23. [判断对象的数据类型](https://github.com/GuoLizhi/awesomejs/blob/master/handwriting/isType.js)
-24. [实现一个简单响应式原理](https://github.com/GuoLizhi/awesomejs/blob/master/handwriting/mvvw.js)
-25. [new实现原理](https://github.com/GuoLizhi/awesomejs/blob/master/handwriting/new.js)
-26. [promise实现原理](https://github.com/GuoLizhi/awesomejs/blob/master/handwriting/promise.js)
-27. [控制最大并发数量](https://github.com/GuoLizhi/awesomejs/blob/master/handwriting/requestLimit.js)
-28. [平滑的滚动到页面的顶部](https://github.com/GuoLizhi/awesomejs/blob/master/handwriting/scrollToTop.js)
-29. [节流函数](https://github.com/GuoLizhi/awesomejs/blob/master/handwriting/throttle.js)
-30. [切换一个元素上的className，如果有则移除；没有就添加](https://github.com/GuoLizhi/awesomejs/blob/master/handwriting/toggleClass.js)
-31. [在给定元素上触发特定事件且能选择地传递自定义数据](https://github.com/GuoLizhi/awesomejs/blob/master/handwriting/triggerEvent.js)
-32. [数组去重](https://github.com/GuoLizhi/awesomejs/blob/master/handwriting/unique.js)
+24. [手写一个简单的webpack loader](https://github.com/GuoLizhi/awesomejs/blob/master/handwriting/loader.js)
+25. [实现一个简单响应式原理](https://github.com/GuoLizhi/awesomejs/blob/master/handwriting/mvvw.js)
+26. [new实现原理](https://github.com/GuoLizhi/awesomejs/blob/master/handwriting/new.js)
+27. [promise实现原理](https://github.com/GuoLizhi/awesomejs/blob/master/handwriting/promise.js)
+28. [控制最大并发数量](https://github.com/GuoLizhi/awesomejs/blob/master/handwriting/requestLimit.js)
+29. [平滑的滚动到页面的顶部](https://github.com/GuoLizhi/awesomejs/blob/master/handwriting/scrollToTop.js)
+30. [节流函数](https://github.com/GuoLizhi/awesomejs/blob/master/handwriting/throttle.js)
+31. [切换一个元素上的className，如果有则移除；没有就添加](https://github.com/GuoLizhi/awesomejs/blob/master/handwriting/toggleClass.js)
+32. [在给定元素上触发特定事件且能选择地传递自定义数据](https://github.com/GuoLizhi/awesomejs/blob/master/handwriting/triggerEvent.js)
+33. [数组去重](https://github.com/GuoLizhi/awesomejs/blob/master/handwriting/unique.js)
 
 
 ## 6. 网络相关
 
 1. [HTTP2](https://github.com/GuoLizhi/awesomejs/blob/master/HTTP/HTTP2.md)
-2. [HTTPS](https://github.com/GuoLizhi/awesomejs/blob/master/HTTP/HTTPS.md)
-3. [TCP&UDP](https://github.com/GuoLizhi/awesomejs/blob/master/HTTP/TCP&UDP.md)
+2. [HTTP3](https://github.com/GuoLizhi/awesomejs/blob/master/HTTP/HTTP3.md)
+3. [HTTPS](https://github.com/GuoLizhi/awesomejs/blob/master/HTTP/HTTPS.md)
+4. [TCP&UDP](https://github.com/GuoLizhi/awesomejs/blob/master/HTTP/TCP&UDP.md)
 
 
 ## 7. JavaScript知识备忘
 
 1. [Object.create](https://github.com/GuoLizhi/awesomejs/blob/master/JavaScript/Object.create.md)
-2. [prototype](https://github.com/GuoLizhi/awesomejs/blob/master/JavaScript/prototype.md)
-3. [thiscallapplybind](https://github.com/GuoLizhi/awesomejs/blob/master/JavaScript/thiscallapplybind.md)
-4. [执行上下文](https://github.com/GuoLizhi/awesomejs/blob/master/JavaScript/执行上下文.md)
-5. [深浅拷贝](https://github.com/GuoLizhi/awesomejs/blob/master/JavaScript/深浅拷贝.md)
+2. [js事件循环](https://github.com/GuoLizhi/awesomejs/blob/master/JavaScript/js事件循环.md)
+3. [prototype](https://github.com/GuoLizhi/awesomejs/blob/master/JavaScript/prototype.md)
+4. [thiscallapplybind](https://github.com/GuoLizhi/awesomejs/blob/master/JavaScript/thiscallapplybind.md)
+5. [事件捕获与冒泡](https://github.com/GuoLizhi/awesomejs/blob/master/JavaScript/事件捕获与冒泡.md)
+6. [执行上下文](https://github.com/GuoLizhi/awesomejs/blob/master/JavaScript/执行上下文.md)
+7. [深浅拷贝](https://github.com/GuoLizhi/awesomejs/blob/master/JavaScript/深浅拷贝.md)
 
 
 ## 8. NodeJS相关
