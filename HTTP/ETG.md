@@ -1,0 +1,1 @@
+nginx 中 etag 由响应头的 `Last-Modified` 与 `Content-Length` 表示为十六进制组合而成。
