@@ -26,7 +26,7 @@ function getAllDirs() {
   let content = ''
   dirs.forEach((dir) => {
     const isDirectory = fs.statSync(dir).isDirectory()
-    if (!/(build|git)/.test(dir) && isDirectory) {
+    if (!/(build|git|dist)/.test(dir) && isDirectory) {
       content += getDirReadme(dir)
     }
   })
