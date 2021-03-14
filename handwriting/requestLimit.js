@@ -16,19 +16,15 @@ function limitLoad(urls, handler, limit) {
     })
   })
 
-  async function loop() {
-    let p = Promise.race(promises)
-    for (let i = 0; i < sequence.length; i++) {
-      // 这里的then中的res就是上面返回的index
-      p = p.then(res => {
-        // 因为第res个最快执行完毕，因此现在将其替换成最新的
-        promises[res] = handler(sequence[i]).then(() => {
-          return res
-        })
-        return Promise.race(promises)
+  let p = Promise.race(promises)
+  for (let i = 0; i < sequence.length; i++) {
+    // 这里的then中的res就是上面返回的index
+    p = p.then(res => {
+      // 因为第res个最快执行完毕，因此现在将其替换成最新的
+      promises[res] = handler(sequence[i]).then(() => {
+        return res
       })
-    }
+      return Promise.race(promises)
+    })
   }
-
-  loop()
 }
