@@ -1,7 +1,8 @@
 ## 1. CSS相关
 
-1. [flex](https://github.com/GuoLizhi/awesomejs/blob/master/CSS/flex.md)
-2. [伪类和伪元素](https://github.com/GuoLizhi/awesomejs/blob/master/CSS/伪类和伪元素.md)
+1. [CSS优先级](https://github.com/GuoLizhi/awesomejs/blob/master/CSS/CSS优先级.md)
+2. [flex](https://github.com/GuoLizhi/awesomejs/blob/master/CSS/flex.md)
+3. [伪类和伪元素](https://github.com/GuoLizhi/awesomejs/blob/master/CSS/伪类和伪元素.md)
 
 
 ## 2. 设计模式相关
@@ -57,7 +58,8 @@
 33. [节流函数](https://github.com/GuoLizhi/awesomejs/blob/master/handwriting/throttle.js)
 34. [切换一个元素上的className，如果有则移除；没有就添加](https://github.com/GuoLizhi/awesomejs/blob/master/handwriting/toggleClass.js)
 35. [在给定元素上触发特定事件且能选择地传递自定义数据](https://github.com/GuoLizhi/awesomejs/blob/master/handwriting/triggerEvent.js)
-36. [数组去重](https://github.com/GuoLizhi/awesomejs/blob/master/handwriting/unique.js)
+36. [手写String.prototype.trim()](https://github.com/GuoLizhi/awesomejs/blob/master/handwriting/trim.js)
+37. [数组去重](https://github.com/GuoLizhi/awesomejs/blob/master/handwriting/unique.js)
 
 
 ## 5. 网络相关
